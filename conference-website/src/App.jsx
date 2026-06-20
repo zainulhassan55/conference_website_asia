@@ -1,26 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import ImportantDates from "./components/ImportantDates";
+import CallForPapers from "./components/CallForPapers";
+import Speakers from "./components/Speakers";
+import Tracks from "./components/Tracks";
+import Committee from "./components/Committee";
+import Registration from "./components/Registration";
+import Venue from "./components/Venue";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <main className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
-      <div className="max-w-xl text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white">
-          Conference Website
-        </h1>
-
-        <p className="mt-5 text-lg text-slate-300">
-          React and Tailwind CSS are installed successfully.
-        </p>
-
-        <button className="mt-8 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-500">
-          Explore Conference
-        </button>
-      </div>
-    </main>
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      <ImportantDates />
+      <CallForPapers />
+      <Speakers />
+      <Tracks />
+      <Committee />
+      <Registration />
+      <Venue />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
 
