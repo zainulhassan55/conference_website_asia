@@ -1,5 +1,5 @@
 import SectionHeading from "./SectionHeading";
-import { conference } from "../data/conferenceData";
+import { conference, aboutContent } from "../data/conferenceData";
 
 export default function About() {
   return (
@@ -8,34 +8,18 @@ export default function About() {
         <SectionHeading
           badge="About the Conference"
           title={`Welcome to ${conference.name} ${conference.edition}`}
-          subtitle="A premier IEEE-approved forum bringing together researchers, academicians, and industry professionals from around the world."
+          subtitle={`${conference.dates.display} · ${conference.location.display}`}
         />
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
-            <p>
-              The <strong className="text-slate-900">{conference.fullName} ({conference.name} {conference.edition})</strong> is
-              an IEEE-approved international conference dedicated to advancing research and innovation in intelligent systems,
-              engineering applications, and emerging technologies.
-            </p>
-            <p>
-              Join us in {conference.location.city} for three days of inspiring keynote speeches, technical paper presentations,
-              panel discussions, and networking opportunities with leading experts from academia and industry worldwide.
-            </p>
-            <p>
-              All accepted and presented papers will be submitted for inclusion in the{" "}
-              <strong className="text-ieee-blue">IEEE Xplore Digital Library</strong>, ensuring global visibility
-              and citation for your research contributions.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
+            {aboutContent.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            ))}
           </div>
 
           <div className="grid sm:grid-cols-2 gap-5">
-            {[
-              { title: "IEEE Approved", desc: "Officially recognized by IEEE with proceedings in Xplore", color: "from-ieee-blue to-ieee-light" },
-              { title: "Global Reach", desc: "Participants from 30+ countries across 6 continents", color: "from-gold to-gold-light" },
-              { title: "Expert Review", desc: "Double-blind peer review by 50+ domain experts", color: "from-ieee-dark to-ieee-blue" },
-              { title: "Networking", desc: "Connect with researchers, industry leaders & innovators", color: "from-slate-700 to-slate-900" },
-            ].map((item) => (
+            {aboutContent.highlights.map((item) => (
               <div
                 key={item.title}
                 className="card-hover rounded-2xl p-6 bg-slate-50 border border-slate-100"

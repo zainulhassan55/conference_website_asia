@@ -3,10 +3,12 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import ImportantDates from "./components/ImportantDates";
 import CallForPapers from "./components/CallForPapers";
-import Speakers from "./components/Speakers";
+import Submission from "./components/Submission";
 import Tracks from "./components/Tracks";
+import Awards from "./components/Awards";
 import Committee from "./components/Committee";
 import Registration from "./components/Registration";
+import Sponsorship from "./components/Sponsorship";
 import Venue from "./components/Venue";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -19,10 +21,12 @@ function App() {
       <About />
       <ImportantDates />
       <CallForPapers />
-      <Speakers />
+      <Submission />
       <Tracks />
+      <Awards />
       <Committee />
       <Registration />
+      <Sponsorship />
       <Venue />
       <Contact />
       <Footer />

@@ -1,32 +1,51 @@
+import { useState } from "react";
 import SectionHeading from "./SectionHeading";
-import { committee } from "../data/conferenceData";
+import { conference, committees } from "../data/conferenceData";
 
-function CommitteeGroup({ title, members }) {
+function CommitteePanel({ title, members, defaultOpen = false }) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const isLarge = members.length > 6;
+
   return (
-    <div>
-      <h3 className="text-xl font-bold text-white font-[family-name:var(--font-display)] mb-6 pb-3 border-b border-white/10">
-        {title}
-      </h3>
-      <div className="space-y-4">
-        {members.map((member) => (
-          <div
-            key={member.name}
-            className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-ieee-light/20 transition-colors"
-          >
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-ieee-blue to-ieee-light flex items-center justify-center shrink-0">
-              <span className="text-white font-bold text-sm">
-                {member.name.split(" ").slice(-1)[0][0]}
-                {member.name.split(" ")[0][0]}
-              </span>
-            </div>
-            <div>
-              <p className="text-white font-semibold">{member.name}</p>
-              <p className="text-ieee-light text-sm font-medium">{member.role}</p>
-              <p className="text-slate-400 text-sm mt-0.5">{member.affiliation}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="rounded-2xl bg-white/5 border border-white/10 overflow-hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left hover:bg-white/5 transition-colors"
+      >
+        <div className="flex items-center gap-3 min-w-0">
+          <h3 className="text-base sm:text-lg font-bold text-white font-[family-name:var(--font-display)]">
+            {title}
+          </h3>
+          <span className="px-2.5 py-0.5 rounded-full bg-ieee-blue/30 text-ieee-light text-xs font-semibold shrink-0">
+            {members.length}
+          </span>
+        </div>
+        <svg
+          className={`w-5 h-5 text-ieee-light shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className="px-5 sm:px-6 pb-5 sm:pb-6">
+          <ul className={isLarge ? "grid sm:grid-cols-2 gap-2" : "space-y-2"}>
+            {members.map((member) => (
+              <li
+                key={member}
+                className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 text-sm text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ieee-light shrink-0" />
+                <span className="leading-relaxed">{member}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
@@ -36,16 +55,21 @@ export default function Committee() {
     <section id="committee" className="py-20 lg:py-28 bg-gradient-to-br from-slate-950 to-ieee-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Organizing Committee"
-          title="Meet the Team"
-          subtitle="Dedicated professionals ensuring a world-class conference experience."
+          badge="Committees"
+          title="Organizing & Program Committees"
+          subtitle={`${conference.dates.display} · ${conference.location.display}`}
           light
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          <CommitteeGroup title="General Chairs" members={committee.general} />
-          <CommitteeGroup title="Program Committee" members={committee.program} />
-          <CommitteeGroup title="Organizing Committee" members={committee.organizing} />
+        <div className="space-y-3 max-w-4xl mx-auto">
+          {committees.map((group, index) => (
+            <CommitteePanel
+              key={group.title}
+              title={group.title}
+              members={group.members}
+              defaultOpen={index < 3}
+            />
+          ))}
         </div>
       </div>
     </section>

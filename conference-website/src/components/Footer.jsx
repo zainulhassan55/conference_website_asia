@@ -16,14 +16,14 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed">
-              {conference.fullName}. Advancing research and innovation in intelligent systems and engineering.
+              {conference.fullName}. Advancing research in AI, security, computing, and networking.
             </p>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {navLinks.slice(0, 5).map((link) => (
+              {navLinks.slice(0, 6).map((link) => (
                 <li key={link.href}>
                   <a href={link.href} className="text-sm hover:text-ieee-light transition-colors">
                     {link.label}
@@ -36,25 +36,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#cfp" className="hover:text-ieee-light transition-colors">Call for Papers</a>
-              </li>
-              <li>
-                <a
-                  href="https://www.ieee.org/conferences/publishing/templates.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-ieee-light transition-colors"
-                >
-                  IEEE Paper Template
-                </a>
-              </li>
-              <li>
-                <a href="#register" className="hover:text-ieee-light transition-colors">Registration</a>
-              </li>
-              <li>
-                <a href="#venue" className="hover:text-ieee-light transition-colors">Venue & Travel</a>
-              </li>
+              <li><a href="#cfp" className="hover:text-ieee-light transition-colors">Call for Papers</a></li>
+              <li><a href="#submission" className="hover:text-ieee-light transition-colors">Paper Submission</a></li>
+              <li><a href="#awards" className="hover:text-ieee-light transition-colors">Awards</a></li>
+              <li><a href="#sponsorship" className="hover:text-ieee-light transition-colors">Sponsorship</a></li>
+              <li><a href="#venue" className="hover:text-ieee-light transition-colors">Venue</a></li>
             </ul>
           </div>
 
@@ -64,7 +50,7 @@ export default function Footer() {
               <li>{conference.dates.display}</li>
               <li>{conference.location.display}</li>
               <li>
-                <a href={`mailto:${conference.contact.email}`} className="hover:text-ieee-light transition-colors">
+                <a href={`mailto:${conference.contact.email}`} className="hover:text-ieee-light transition-colors break-all">
                   {conference.contact.email}
                 </a>
               </li>
@@ -76,7 +62,7 @@ export default function Footer() {
           <p className="text-sm">
             &copy; {new Date().getFullYear()} {conference.name} {conference.edition}. All rights reserved.
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-500 text-center sm:text-right">
             IEEE is a registered trademark of The Institute of Electrical and Electronics Engineers, Inc.
           </p>
         </div>

@@ -1,13 +1,9 @@
+import { useState } from "react";
 import SectionHeading from "./SectionHeading";
+import { conference, trackTopics } from "../data/conferenceData";
 
 export default function CallForPapers() {
-  const guidelines = [
-    "Original, unpublished research not under review elsewhere",
-    "Maximum 8 pages including references (IEEE two-column format)",
-    "Submitted via Microsoft CMT or EasyChair platform",
-    "Double-blind peer review process",
-    "At least one author must register and present the paper",
-  ];
+  const [openTrack, setOpenTrack] = useState(0);
 
   return (
     <section id="cfp" className="py-20 lg:py-28 bg-gradient-to-br from-slate-950 via-ieee-dark to-slate-950 relative overflow-hidden">
@@ -18,67 +14,69 @@ export default function CallForPapers() {
         <SectionHeading
           badge="Call for Papers"
           title="Share Your Research"
-          subtitle="We invite researchers and practitioners to submit their original contributions to ICISEA 2026."
+          subtitle={`${conference.dates.display} · ${conference.location.display}`}
           light
         />
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-          <div className="glass rounded-3xl p-8 lg:p-10">
-            <h3 className="text-2xl font-bold text-white font-[family-name:var(--font-display)] mb-6">
-              Submission Guidelines
-            </h3>
-            <ul className="space-y-4">
-              {guidelines.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-slate-300">
-                  <span className="mt-1.5 w-2 h-2 rounded-full bg-ieee-light shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 p-5 rounded-2xl bg-gold/10 border border-gold/20">
-              <p className="text-gold font-semibold">Paper Submission Deadline</p>
-              <p className="text-white text-2xl font-bold mt-1">May 31, 2026</p>
-            </div>
+        <div className="max-w-4xl mx-auto mb-12 space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
+          <p>
+            Accepted and presented papers will be considered for publication in the conference proceedings.
+          </p>
+          <div className="glass rounded-2xl p-6 border border-white/10">
+            <p className="text-gold font-semibold mb-1">Publication Details</p>
+            <p className="text-white">TBD</p>
+            <p className="mt-3 text-slate-400 text-sm sm:text-base">
+              Selected high-quality papers may be invited for extended versions in special issues of reputed international journals.
+            </p>
           </div>
+          <p>
+            The conference welcomes original research contributions in, but not limited to, the following areas:
+          </p>
+        </div>
 
-          <div className="space-y-6">
-            <div className="glass rounded-3xl p-8 lg:p-10">
-              <h3 className="text-2xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
-                Publication & Indexing
-              </h3>
-              <p className="text-slate-300 leading-relaxed">
-                All accepted papers will be published in the conference proceedings and submitted to the{" "}
-                <strong className="text-ieee-light">IEEE Xplore Digital Library</strong>. Selected high-quality
-                papers will be invited for extension and publication in partner journals.
-              </p>
-            </div>
+        <div className="space-y-3 max-w-4xl mx-auto">
+          {trackTopics.map((track, index) => (
+            <div
+              key={track.number}
+              className="glass rounded-2xl overflow-hidden border border-white/10"
+            >
+              <button
+                onClick={() => setOpenTrack(openTrack === index ? -1 : index)}
+                className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left hover:bg-white/5 transition-colors"
+              >
+                <div className="flex items-center gap-4 min-w-0">
+                  <span className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-ieee-blue to-ieee-light flex items-center justify-center text-white font-bold text-sm">
+                    {track.number}
+                  </span>
+                  <span className="text-white font-semibold text-sm sm:text-base leading-snug">
+                    Track {track.number}: {track.title}
+                  </span>
+                </div>
+                <svg
+                  className={`w-5 h-5 text-ieee-light shrink-0 transition-transform ${openTrack === index ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
-            <div className="glass rounded-3xl p-8 lg:p-10">
-              <h3 className="text-2xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
-                Paper Templates
-              </h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
-                Authors must use the official IEEE conference template for paper preparation.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://www.ieee.org/conferences/publishing/templates.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-white text-ieee-dark font-semibold rounded-xl hover:bg-slate-100 transition-colors"
-                >
-                  Download IEEE Template
-                </a>
-                <a
-                  href="#contact"
-                  className="px-6 py-3 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/5 transition-colors"
-                >
-                  Contact Program Chair
-                </a>
-              </div>
+              {openTrack === index && (
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-0">
+                  <ul className="grid sm:grid-cols-2 gap-2 pl-14">
+                    {track.topics.map((topic) => (
+                      <li key={topic} className="flex items-start gap-2 text-slate-300 text-sm">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-ieee-light shrink-0" />
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
