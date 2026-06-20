@@ -28,6 +28,7 @@ export const conference = {
     language: "English",
     platform: "Microsoft CMT",
     templateUrl: "https://www.ieee.org/conferences/publishing/templates.html",
+    cmt3Url: "https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FAISCN2027",
   },
 };
 

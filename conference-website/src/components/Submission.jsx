@@ -50,7 +50,10 @@ export default function Submission() {
               </h3>
               <p className="text-slate-200 leading-relaxed mb-4">
                 Authors are requested to submit their papers via{" "}
-                <strong className="text-white">{submission.platform}</strong> in PDF format before the deadline.
+                <a href={submission.cmt3Url} target="_blank" rel="noopener noreferrer" className="text-white underline">
+                  {submission.platform}
+                </a>{" "}
+                in PDF format before the deadline.
               </p>
               <p className="text-slate-300 text-sm leading-relaxed">
                 The Microsoft CMT service is used for managing the peer-reviewing process for this conference.
