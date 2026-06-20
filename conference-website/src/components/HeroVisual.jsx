@@ -21,7 +21,8 @@ export default function HeroVisual() {
       <div className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl shadow-ieee-blue/30 animate-hero-float">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent z-10" />
         <img
-          src="/hero-aiscn.jpg"
+          //src="/hero-aiscn.jpg"
+          src={`${import.meta.env.BASE_URL}hero-aiscn.jpg`}
           alt="AISCN 2027 - AI, Security, Computing, and Networking Conference"
           className="w-full aspect-[4/3] object-cover animate-ken-burns"
         />
