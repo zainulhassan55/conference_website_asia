@@ -19,10 +19,10 @@ export default function Speakers() {
           subtitle="Distinguished experts sharing insights on cutting-edge research and industry trends."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
           {speakers.map((speaker, index) => (
             <div
-              key={speaker.name}
+              key={`${speaker.name}-${index}`}
               className="card-hover group rounded-2xl overflow-hidden bg-slate-50 border border-slate-100"
             >
               <div className={`h-32 bg-gradient-to-br ${avatarColors[index % avatarColors.length]} relative`}>

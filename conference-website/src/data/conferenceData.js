@@ -30,21 +30,38 @@ export const conference = {
     templateUrl: "https://www.ieee.org/conferences/publishing/templates.html",
     cmt3Url: "https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FAISCN2027",
   },
+  logo: `${import.meta.env.BASE_URL}logo.png`,
 };
 
-export const navLinks = [
+export const navItems = [
   { label: "About", href: "#about" },
   { label: "Dates", href: "#dates" },
-  { label: "Call for Papers", href: "#cfp" },
-  { label: "Submission", href: "#submission" },
-  { label: "Tracks", href: "#tracks" },
-  { label: "Awards", href: "#awards" },
+  {
+    label: "Authors",
+    children: [
+      { label: "Call for Papers", href: "#cfp" },
+      { label: "Submission", href: "#submission" },
+      { label: "Registration", href: "#register" },
+    ],
+  },
   { label: "Committee", href: "#committee" },
-  { label: "Register", href: "#register" },
+  {
+    label: "Program",
+    children: [
+      { label: "Tutorials & Workshops", href: "#tutorials" },
+      { label: "Keynote Speakers", href: "#speakers" },
+      { label: "Tracks", href: "#tracks" },
+      { label: "Awards", href: "#awards" },
+    ],
+  },
   { label: "Sponsorship", href: "#sponsorship" },
   { label: "Venue", href: "#venue" },
   { label: "Contact", href: "#contact" },
 ];
+
+export const navLinks = navItems.flatMap((item) =>
+  item.children ? item.children : [item]
+);
 
 export const aboutContent = {
   paragraphs: [
@@ -356,6 +373,54 @@ export const committees = [
       "Angela Amphawan, University Malaysia, Malaysia",
       "Phuc Do, University of Information Technology, Vietnam",
       "Ahmed A. Abd El-Latif, Menoufia University, Egypt",
+    ],
+  },
+];
+
+export const speakers = [
+  {
+    name: "To Be Announced",
+    title: "Keynote Speaker",
+    affiliation: "Details coming soon",
+    topic: "Announcement forthcoming",
+  },
+  {
+    name: "To Be Announced",
+    title: "Keynote Speaker",
+    affiliation: "Details coming soon",
+    topic: "Announcement forthcoming",
+  },
+  {
+    name: "To Be Announced",
+    title: "Keynote Speaker",
+    affiliation: "Details coming soon",
+    topic: "Announcement forthcoming",
+  },
+  {
+    name: "To Be Announced",
+    title: "Keynote Speaker",
+    affiliation: "Details coming soon",
+    topic: "Announcement forthcoming",
+  },
+];
+
+export const tutorialsWorkshops = [
+  {
+    title: "Tutorials",
+    description:
+      "Expert-led sessions covering foundational and advanced topics in AI, cybersecurity, computing, and networking.",
+    items: [
+      "Tutorial topics and schedules will be announced soon.",
+      "Sessions are designed for researchers, practitioners, and students.",
+    ],
+  },
+  {
+    title: "Workshops",
+    description:
+      "Interactive workshops providing hands-on experience and focused discussions on emerging research directions.",
+    items: [
+      "Workshop themes and organizers will be announced soon.",
+      "Participation details will be shared closer to the conference dates.",
     ],
   },
 ];

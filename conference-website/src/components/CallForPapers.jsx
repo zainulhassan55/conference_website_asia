@@ -44,12 +44,12 @@ export default function CallForPapers() {
                 onClick={() => setOpenTrack(openTrack === index ? -1 : index)}
                 className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left hover:bg-white/5 transition-colors"
               >
-                <div className="flex items-center gap-4 min-w-0">
-                  <span className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-ieee-blue to-ieee-light flex items-center justify-center text-white font-bold text-sm">
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                  <span className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-gradient-to-br from-ieee-blue to-ieee-light flex items-center justify-center text-white font-bold text-sm">
                     {track.number}
                   </span>
                   <span className="text-white font-semibold text-sm sm:text-base leading-snug">
-                    Track {track.number}: {track.title}
+                    {track.title}
                   </span>
                 </div>
                 <svg
@@ -65,7 +65,7 @@ export default function CallForPapers() {
 
               {openTrack === index && (
                 <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-0">
-                  <ul className="grid sm:grid-cols-2 gap-2 pl-14">
+                  <ul className="grid sm:grid-cols-2 gap-2 sm:pl-14">
                     {track.topics.map((topic) => (
                       <li key={topic} className="flex items-start gap-2 text-slate-300 text-sm">
                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-ieee-light shrink-0" />

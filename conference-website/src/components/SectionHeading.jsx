@@ -1,6 +1,6 @@
 export default function SectionHeading({ badge, title, subtitle, light = false }) {
   return (
-    <div className="text-center max-w-3xl mx-auto mb-14">
+    <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 px-1">
       {badge && (
         <span
           className={`inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4 ${
@@ -13,7 +13,7 @@ export default function SectionHeading({ badge, title, subtitle, light = false }
         </span>
       )}
       <h2
-        className={`text-3xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-display)] ${
+        className={`text-2xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-display)] ${
           light ? "text-white" : "text-slate-900"
         }`}
       >

@@ -41,9 +41,9 @@ export default function ImportantDates() {
                         : "bg-white border border-slate-100 shadow-sm"
                     }`}
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
                       <h3
-                        className={`font-semibold text-lg ${
+                        className={`font-semibold text-base sm:text-lg leading-snug ${
                           item.status === "highlight" ? "text-white" : "text-slate-900"
                         }`}
                       >

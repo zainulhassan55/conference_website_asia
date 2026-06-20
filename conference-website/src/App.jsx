@@ -7,6 +7,8 @@ import Submission from "./components/Submission";
 import Tracks from "./components/Tracks";
 import Awards from "./components/Awards";
 import Committee from "./components/Committee";
+import TutorialsWorkshops from "./components/TutorialsWorkshops";
+import Speakers from "./components/Speakers";
 import Registration from "./components/Registration";
 import Sponsorship from "./components/Sponsorship";
 import Venue from "./components/Venue";
@@ -15,7 +17,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
@@ -25,6 +27,8 @@ function App() {
       <Tracks />
       <Awards />
       <Committee />
+      <TutorialsWorkshops />
+      <Speakers />
       <Registration />
       <Sponsorship />
       <Venue />

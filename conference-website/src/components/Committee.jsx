@@ -16,9 +16,6 @@ function CommitteePanel({ title, members, defaultOpen = false }) {
           <h3 className="text-base sm:text-lg font-bold text-white font-[family-name:var(--font-display)]">
             {title}
           </h3>
-          <span className="px-2.5 py-0.5 rounded-full bg-ieee-blue/30 text-ieee-light text-xs font-semibold shrink-0">
-            {members.length}
-          </span>
         </div>
         <svg
           className={`w-5 h-5 text-ieee-light shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
@@ -37,7 +34,7 @@ function CommitteePanel({ title, members, defaultOpen = false }) {
             {members.map((member) => (
               <li
                 key={member}
-                className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 text-sm text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+                className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 text-sm sm:text-base text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
               >
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ieee-light shrink-0" />
                 <span className="leading-relaxed">{member}</span>

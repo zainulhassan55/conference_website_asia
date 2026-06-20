@@ -7,9 +7,11 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-ieee-blue to-ieee-light flex items-center justify-center">
-                <span className="text-white font-bold text-sm">IEEE</span>
-              </div>
+              <img
+                src={conference.logo}
+                alt={`${conference.name} ${conference.edition} logo`}
+                className="h-11 w-auto object-contain"
+              />
               <div>
                 <p className="text-white font-bold">{conference.name} {conference.edition}</p>
                 <p className="text-xs">IEEE Approved</p>

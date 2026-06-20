@@ -12,7 +12,7 @@ export default function Registration() {
         />
 
         <div className="max-w-2xl mx-auto">
-          <div className="rounded-3xl p-10 sm:p-14 bg-white border border-slate-100 shadow-lg text-center relative overflow-hidden">
+          <div className="rounded-3xl p-8 sm:p-10 lg:p-14 bg-white border border-slate-100 shadow-lg text-center relative overflow-hidden">
             <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-ieee-blue via-ieee-light to-gold" />
             <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-ieee-blue/10 to-ieee-light/10 flex items-center justify-center mb-6">
               <svg className="w-10 h-10 text-ieee-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

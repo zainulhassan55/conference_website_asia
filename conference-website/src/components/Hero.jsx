@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-ieee-blue/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl animate-pulse" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pt-32 lg:pb-28 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-28 w-full">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <div className="animate-fade-in-up opacity-0 flex flex-wrap items-center gap-3 mb-6">
@@ -92,7 +92,7 @@ export default function Hero() {
 
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 hover:text-white transition-colors animate-float"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 text-slate-400 hover:text-white transition-colors animate-float hidden sm:block"
         aria-label="Scroll to about section"
       >
         <IconChevronDown className="w-8 h-8" />
