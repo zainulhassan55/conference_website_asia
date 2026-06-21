@@ -14,6 +14,7 @@ import Sponsorship from "./components/Sponsorship";
 import Venue from "./components/Venue";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Venue />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
