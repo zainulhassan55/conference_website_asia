@@ -20,6 +20,11 @@ body {
   overflow-x: hidden;
 }
 
+main p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;

@@ -9,11 +9,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <TechnicalSponsor />
       <AimAndScope />
       <Tracks home />
       <Awards hideBadge />
       <Organizers />
-      <TechnicalSponsor />
     </>
   );
 }

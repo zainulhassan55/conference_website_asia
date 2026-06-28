@@ -2,7 +2,7 @@ export const conference = {
   name: "AISCN",
   fullName: "International Conference on AI, Security, Computing, and Networking",
   edition: "2027",
-  tagline: "Fostering Interdisciplinary Collaboration for Next-Generation Intelligent Systems",
+  tagline: "All accepted and presented papers of AISCN 2027 will be submitted for inclusion in the IEEE Xplore Digital Library subject to compliance with IEEE quality and publication requirements.",
   ieeeLogo: `${import.meta.env.BASE_URL}ieee_logo.png`,
   ieeeSmcLogo: `${import.meta.env.BASE_URL}smc_logo.png`,
   auLogo: `${import.meta.env.BASE_URL}au_logo.png`,
