@@ -427,7 +427,6 @@ export const welcomeMessage = {
     {
       name: "Prof. Brij B. Gupta",
       lines: [
-        "General Chair, AISCN 2027",
         "Director, International Center for AI and Cyber Security Research and Innovations (CCRI)",
         "Asia University, Taiwan",
         "General Chair, AISCN 2027",
@@ -437,7 +436,6 @@ export const welcomeMessage = {
     {
       name: "Dr. Veerpratap Meena",
       lines: [
-        "General Chair, AISCN 2027",
         "Assistant Professor, Department of Electrical Engineering",
         "National Institute of Technology Jamshedpur, India",
         "Chair, Student Chapter Educational Program Subcommittee (Regions 1–10), IEEE Systems Council, USA",
