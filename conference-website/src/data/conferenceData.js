@@ -6,7 +6,7 @@ export const conference = {
   ieeeLogo: `${import.meta.env.BASE_URL}ieee_logo.png`,
   ieeeSmcLogo: `${import.meta.env.BASE_URL}smc_logo.png`,
   auLogo: `${import.meta.env.BASE_URL}au_logo.png`,
-  ccriLogo: `${import.meta.env.BASE_URL}ccri_logo.jpeg`,
+  ccriLogo: `${import.meta.env.BASE_URL}ccri_logo.png`,
   dates: {
     start: "April 9, 2027",
     end: "April 11, 2027",
