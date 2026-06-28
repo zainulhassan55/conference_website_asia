@@ -63,7 +63,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/5 flex justify-center items-center">
           <div className="max-w-3xl space-y-3 text-sm text-center text-slate-400">
             <p>
-              &copy; 2027 AIEI Conference. All rights reserved. | International Conference on AI Engineering and Innovation
+              &copy; 2027 AISCN Conference. All rights reserved. | International Conference on AI Engineering and Innovation
             </p>
             <p>
               &copy; Accepted and presented papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore&apos;s scope and quality requirements.
