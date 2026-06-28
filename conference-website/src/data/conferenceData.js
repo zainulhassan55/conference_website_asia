@@ -31,7 +31,7 @@ export const conference = {
     templateUrl: "https://www.ieee.org/conferences/publishing/templates.html",
     cmt3Url: "https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FAISCN2027",
   },
-  logo: `${import.meta.env.BASE_URL}logo.png`,
+  logo: `${import.meta.env.BASE_URL}new_logo.jpeg`,
 };
 
 export const navItems = [
@@ -388,12 +388,13 @@ export const speakers = [
 ];
 
 export const welcomeMessage = {
-  chair: "General Chair, AISCN 2027",
+  chair: "General Chairs, AISCN 2027",
+  chairNameOne: "Dr. Veerpratap Meena",
   chairName: "Prof. Brij Gupta",
-  chairTitle: "General Chair",
+  chairTitle: "General Chairs",
   chairAffiliation: "Asia University, Taiwan",
   paragraphs: [
-    "On behalf of the organizing committee, it is my great pleasure to welcome you to the International Conference on AI, Security, Computing, and Networking (AISCN 2027), to be held at Asia University, Taichung, Taiwan.",
+    "On behalf of the organizing committee, it is our great pleasure to welcome you to the International Conference on AI, Security, Computing, and Networking (AISCN 2027), to be held at Asia University, Taichung, Taiwan.",
     "AISCN 2027 brings together researchers, academicians, industry experts, and practitioners from around the world to share innovative ideas, present cutting-edge research, and discuss emerging trends in artificial intelligence, cyber security, computing technologies, communication systems, and computer networks.",
     "We look forward to your participation and to fostering interdisciplinary collaboration for next-generation intelligent systems. We hope you will join us for an engaging and inspiring conference experience.",
   ],

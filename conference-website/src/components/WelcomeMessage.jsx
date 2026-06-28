@@ -7,8 +7,8 @@ export default function WelcomeMessage({ showHeading = true }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeading && (
           <SectionHeading
-            badge="General Chair"
-            title="Welcome Message from the General Chair"
+            badge="General Chairs"
+            title="Welcome Message from the General Chairs"
             subtitle={welcomeMessage.chair}
           />
         )}
@@ -22,9 +22,9 @@ export default function WelcomeMessage({ showHeading = true }) {
             </div>
 
             <div className="mt-8 pt-6 border-t border-slate-200">
+              <p className="font-bold text-slate-900 text-lg">{welcomeMessage.chairNameOne}</p>
               <p className="font-bold text-slate-900 text-lg">{welcomeMessage.chairName}</p>
               <p className="text-ieee-blue font-medium">{welcomeMessage.chairTitle}</p>
-              <p className="text-slate-500 text-sm mt-1">{welcomeMessage.chairAffiliation}</p>
             </div>
           </div>
         </div>

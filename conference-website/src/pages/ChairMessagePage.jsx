@@ -6,8 +6,8 @@ export default function ChairMessagePage() {
     <>
       <PageBanner
         badge="Authors"
-        title="Chair Message"
-        subtitle="Welcome message from the General Chair of AISCN 2027."
+        title="Chairs Message"
+        subtitle="Welcome message from the General Chairs of AISCN 2027."
       />
       <WelcomeMessage showHeading={false} />
     </>
