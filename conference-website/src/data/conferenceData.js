@@ -5,6 +5,8 @@ export const conference = {
   tagline: "Fostering Interdisciplinary Collaboration for Next-Generation Intelligent Systems",
   ieeeLogo: `${import.meta.env.BASE_URL}ieee_logo.png`,
   ieeeSmcLogo: `${import.meta.env.BASE_URL}smc_logo.png`,
+  auLogo: `${import.meta.env.BASE_URL}au_logo.png`,
+  ccriLogo: `${import.meta.env.BASE_URL}ccri_logo.jpeg`,
   dates: {
     start: "April 9, 2027",
     end: "April 11, 2027",
@@ -311,6 +313,7 @@ export const committees = [
     members: [
       "Moon Jusung, Asia University, Taiwan",
       "Szu-Ting Wang, Chaoyang University of Technology, Taiwan",
+      "Zain Ul Hassan, Asia University, Taiwan",
     ],
   },
   {
@@ -388,15 +391,35 @@ export const speakers = [
 ];
 
 export const welcomeMessage = {
-  chair: "General Chairs, AISCN 2027",
-  chairNameOne: "Dr. Veerpratap Meena",
-  chairName: "Prof. Brij Gupta",
-  chairTitle: "General Chairs",
-  chairAffiliation: "Asia University, Taiwan",
+  opening: "Dear Researchers, Academicians, Industry Professionals, and Students,",
   paragraphs: [
-    "On behalf of the organizing committee, it is our great pleasure to welcome you to the International Conference on AI, Security, Computing, and Networking (AISCN 2027), to be held at Asia University, Taichung, Taiwan.",
-    "AISCN 2027 brings together researchers, academicians, industry experts, and practitioners from around the world to share innovative ideas, present cutting-edge research, and discuss emerging trends in artificial intelligence, cyber security, computing technologies, communication systems, and computer networks.",
-    "We look forward to your participation and to fostering interdisciplinary collaboration for next-generation intelligent systems. We hope you will join us for an engaging and inspiring conference experience.",
+    "It is our great pleasure to welcome you to the International Conference on AI, Security, Computing, and Networking (AISCN 2027), to be held in hybrid mode during April 9–11, 2027, at Asia University, Taichung, Taiwan.",
+    "It is our privilege to invite researchers, academicians, industry experts, practitioners, and students from around the world to participate in AISCN 2027. Organized by Asia University, Taiwan, and the International Center for AI and Cyber Security Research and Innovations (CCRI), Asia University, Taiwan, the conference serves as a premier international platform for the dissemination of innovative research and the exchange of ideas in the fields of Artificial Intelligence, Cyber Security, Computing, and Networking.",
+    "AISCN 2027 (Conference Record #73131, ISBN: 979-8-3195-2578-9) is technically co-sponsored by the IEEE Systems, Man, and Cybernetics Society (IEEE SMC). The conference is dedicated to fostering interdisciplinary collaboration and advancing the frontiers of intelligent systems, machine learning, secure computing, cyber resilience, communication networks, data analytics, and emerging digital technologies.",
+    "The technical program of AISCN 2027 will feature keynote addresses from distinguished scholars and industry leaders, high-quality paper presentations, special sessions, tutorials, and networking opportunities. These activities are designed to encourage the exchange of knowledge, stimulate innovation, and establish meaningful collaborations among participants from academia, industry, and government organizations.",
+    "We are committed to maintaining the highest standards of technical excellence and scholarly integrity. All accepted and presented papers will be submitted for inclusion in the IEEE Xplore Digital Library, subject to compliance with IEEE quality standards and publication requirements.",
+    "We sincerely thank the authors, reviewers, technical program committee members, keynote speakers, sponsors, and volunteers for their valuable contributions and unwavering support. Their dedication is instrumental to the success of AISCN 2027.",
+    "We warmly welcome you to Taichung and look forward to your participation in AISCN 2027. We are confident that the conference will provide an inspiring environment for learning, collaboration, and innovation, while fostering long-lasting professional relationships and advancing research that addresses global challenges.",
+    "We look forward to meeting you at AISCN 2027.",
+  ],
+  chairs: [
+    {
+      name: "Prof. Brij B. Gupta",
+      lines: [
+        "General Chair, AISCN 2027",
+        "Director, International Center for AI and Cyber Security Research and Innovations (CCRI)",
+        "Asia University, Taiwan",
+      ],
+    },
+    {
+      name: "Dr. Veerpratap Meena",
+      lines: [
+        "General Chair, AISCN 2027",
+        "Assistant Professor, Department of Electrical Engineering",
+        "National Institute of Technology Jamshedpur, India",
+        "Chair, Student Chapter Educational Program Subcommittee (Regions 1–10), IEEE Systems Council, USA",
+      ],
+    },
   ],
 };
 

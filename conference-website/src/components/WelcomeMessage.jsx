@@ -8,23 +8,31 @@ export default function WelcomeMessage({ showHeading = true }) {
         {showHeading && (
           <SectionHeading
             badge="General Chairs"
-            title="Welcome Message from the General Chairs"
-            subtitle={welcomeMessage.chair}
+            title="Chairs Message"
+            subtitle="Welcome message from the General Chairs of AISCN 2027."
           />
         )}
 
         <div className="max-w-4xl mx-auto">
           <div className="rounded-3xl border border-slate-100 bg-slate-50 p-8 lg:p-10 shadow-sm">
             <div className="space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
+              <p className="font-medium text-slate-800">{welcomeMessage.opening}</p>
               {welcomeMessage.paragraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-200">
-              <p className="font-bold text-slate-900 text-lg">{welcomeMessage.chairNameOne}</p>
-              <p className="font-bold text-slate-900 text-lg">{welcomeMessage.chairName}</p>
-              <p className="text-ieee-blue font-medium">{welcomeMessage.chairTitle}</p>
+            <div className="mt-8 pt-6 border-t border-slate-200 space-y-8">
+              {welcomeMessage.chairs.map((chair) => (
+                <div key={chair.name}>
+                  <p className="font-bold text-slate-900 text-lg">{chair.name}</p>
+                  {chair.lines.map((line) => (
+                    <p key={line} className="text-slate-600 text-sm sm:text-base mt-1">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
