@@ -6,7 +6,6 @@ export default function AimAndScope() {
     <section id="aim-scope" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="About"
           title="Aim and Scope"
           subtitle="AISCN 2027 brings together researchers and practitioners to advance intelligent systems and digital transformation."
         />

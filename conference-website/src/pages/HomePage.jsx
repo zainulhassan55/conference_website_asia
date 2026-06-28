@@ -10,7 +10,7 @@ export default function HomePage() {
       <Hero />
       <AimAndScope />
       <Tracks home />
-      <Awards />
+      <Awards hideBadge />
       <TechnicalSponsor />
     </>
   );

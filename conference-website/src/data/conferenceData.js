@@ -35,7 +35,6 @@ export const conference = {
 };
 
 export const navItems = [
-  { label: "About", href: "/about" },
   { label: "Dates", href: "/dates" },
   {
     label: "Authors",

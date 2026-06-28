@@ -12,7 +12,7 @@ export default function Tracks({ showHeading = true, home = false }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeading && (
           <SectionHeading
-            badge="Research Tracks"
+            badge={home ? undefined : "Research Tracks"}
             title={home ? "Tracks" : "Conference Topics"}
             subtitle="The conference welcomes original research contributions in, but not limited to, the following areas."
           />

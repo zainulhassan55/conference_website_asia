@@ -25,7 +25,6 @@ export default function TechnicalSponsor() {
     <section id="technical-sponsor" className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Partners"
           title="Technical Sponsor"
           subtitle="AISCN 2027 is supported by the following technical sponsors."
         />

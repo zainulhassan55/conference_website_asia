@@ -16,13 +16,13 @@ const icons = [
   </svg>,
 ];
 
-export default function Awards({ showHeading = true }) {
+export default function Awards({ showHeading = true, hideBadge = false }) {
   return (
     <section id="awards" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeading && (
           <SectionHeading
-            badge="Awards"
+            badge={hideBadge ? undefined : "Awards"}
             title="Recognizing Excellence"
             subtitle="The Organizing Committee will select high-quality submissions for the following awards."
           />
