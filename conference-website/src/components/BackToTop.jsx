@@ -20,7 +20,7 @@ export default function BackToTop() {
       type="button"
       onClick={scrollToTop}
       aria-label="Scroll to top"
-      className={`fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-ieee-blue to-ieee-light text-white shadow-lg shadow-ieee-blue/30 border border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-ieee-blue/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-ieee-light focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
+      className={`fixed bottom-6 right-6 z-[9980] flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-ieee-blue to-ieee-light text-white shadow-lg shadow-ieee-blue/30 border border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-ieee-blue/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-ieee-light focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${
         visible
           ? "translate-y-0 opacity-100 pointer-events-auto"
           : "translate-y-4 opacity-0 pointer-events-none"
