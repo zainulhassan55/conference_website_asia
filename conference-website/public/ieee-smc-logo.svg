@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-label="IEEE Systems, Man, and Cybernetics Society">
+  <path fill="#00629B" d="M24 8 L44 40 L24 72 L4 40 Z"/>
+  <text x="54" y="30" fill="#00629B" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">IEEE</text>
+  <text x="54" y="50" fill="#00629B" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Systems, Man, and</text>
+  <text x="54" y="66" fill="#00629B" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Cybernetics Society</text>
+</svg>

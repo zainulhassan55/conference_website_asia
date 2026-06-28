@@ -2,17 +2,19 @@ import SectionHeading from "./SectionHeading";
 import { conference } from "../data/conferenceData";
 import { IconLocation } from "./Icons";
 
-export default function Venue() {
+export default function Venue({ showHeading = true }) {
   const mapEmbedUrl = `https://maps.google.com/maps?q=${conference.location.mapQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 
   return (
     <section id="venue" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Venue"
-          title="Conference Location"
-          subtitle={`${conference.dates.display} · ${conference.location.display}`}
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Venue"
+            title="Conference Location"
+            subtitle={`${conference.dates.display} · ${conference.location.display}`}
+          />
+        )}
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
           <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-ieee-dark to-ieee-blue p-8 lg:p-10 text-white relative">

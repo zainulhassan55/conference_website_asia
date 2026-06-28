@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { navLinks, conference } from "../data/conferenceData";
 
 export default function Footer() {
@@ -14,7 +15,6 @@ export default function Footer() {
               />
               <div>
                 <p className="text-white font-bold">{conference.name} {conference.edition}</p>
-                <p className="text-xs">IEEE Approved</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed">
@@ -27,9 +27,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {navLinks.slice(0, 6).map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm hover:text-ieee-light transition-colors">
+                  <Link to={link.href} className="text-sm hover:text-ieee-light transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -38,11 +38,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#cfp" className="hover:text-ieee-light transition-colors">Call for Papers</a></li>
-              <li><a href="#submission" className="hover:text-ieee-light transition-colors">Paper Submission</a></li>
-              <li><a href="#awards" className="hover:text-ieee-light transition-colors">Awards</a></li>
-              <li><a href="#sponsorship" className="hover:text-ieee-light transition-colors">Sponsorship</a></li>
-              <li><a href="#venue" className="hover:text-ieee-light transition-colors">Venue</a></li>
+              <li><Link to="/submission" className="hover:text-ieee-light transition-colors">Paper Submission</Link></li>
+              <li><Link to="/tracks" className="hover:text-ieee-light transition-colors">Conference Topics</Link></li>
+              <li><Link to="/awards" className="hover:text-ieee-light transition-colors">Awards</Link></li>
+              <li><Link to="/sponsorship" className="hover:text-ieee-light transition-colors">Sponsorship</Link></li>
+              <li><Link to="/venue" className="hover:text-ieee-light transition-colors">Venue</Link></li>
             </ul>
           </div>
 

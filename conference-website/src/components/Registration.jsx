@@ -1,15 +1,17 @@
 import SectionHeading from "./SectionHeading";
 import { conference } from "../data/conferenceData";
 
-export default function Registration() {
+export default function Registration({ showHeading = true }) {
   return (
     <section id="register" className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Registration"
-          title="Join the Conference"
-          subtitle={`${conference.dates.display} · ${conference.location.display}`}
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Registration"
+            title="Join the Conference"
+            subtitle={`${conference.dates.display} · ${conference.location.display}`}
+          />
+        )}
 
         <div className="max-w-2xl mx-auto">
           <div className="rounded-3xl p-8 sm:p-10 lg:p-14 bg-white border border-slate-100 shadow-lg text-center relative overflow-hidden">

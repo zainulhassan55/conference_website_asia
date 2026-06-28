@@ -47,16 +47,18 @@ function CommitteePanel({ title, members, defaultOpen = false }) {
   );
 }
 
-export default function Committee() {
+export default function Committee({ showHeading = true }) {
   return (
     <section id="committee" className="py-20 lg:py-28 bg-gradient-to-br from-slate-950 to-ieee-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Committees"
-          title="Organizing & Program Committees"
-          subtitle={`${conference.dates.display} · ${conference.location.display}`}
-          light
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Committees"
+            title="Organizing & Program Committees"
+            subtitle={`${conference.dates.display} · ${conference.location.display}`}
+            light
+          />
+        )}
 
         <div className="space-y-3 max-w-4xl mx-auto">
           {committees.map((group, index) => (

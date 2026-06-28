@@ -16,15 +16,17 @@ const icons = [
   </svg>,
 ];
 
-export default function Awards() {
+export default function Awards({ showHeading = true }) {
   return (
     <section id="awards" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Awards"
-          title="Recognizing Excellence"
-          subtitle="The Organizing Committee will select high-quality submissions for the following awards."
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Awards"
+            title="Recognizing Excellence"
+            subtitle="The Organizing Committee will select high-quality submissions for the following awards."
+          />
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-5xl mx-auto">
           {awards.map((award, index) => (

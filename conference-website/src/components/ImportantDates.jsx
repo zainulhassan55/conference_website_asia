@@ -1,38 +1,35 @@
+import { Link } from "react-router-dom";
 import SectionHeading from "./SectionHeading";
 import { importantDates } from "../data/conferenceData";
 
-export default function ImportantDates() {
+export default function ImportantDates({ preview = false }) {
+  const dates = preview ? importantDates.slice(0, 4) : importantDates;
+
   return (
-    <section id="dates" className="py-20 lg:py-28 bg-slate-50">
+    <section id="dates" className={`py-20 lg:py-28 ${preview ? "bg-white" : "bg-slate-50"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Timeline"
-          title="Important Dates"
-          subtitle="Mark your calendar with these key deadlines and milestones for the conference."
-        />
+        {preview && (
+          <SectionHeading
+            badge="Timeline"
+            title="Important Dates"
+            subtitle="Mark your calendar with these key deadlines and milestones for the conference."
+          />
+        )}
 
         <div className="max-w-3xl mx-auto">
           <div className="relative">
-            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-ieee-blue via-ieee-light to-gold" />
+            <div className="absolute left-3 sm:left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-ieee-blue via-ieee-light to-gold" />
 
             <div className="space-y-6">
-              {importantDates.map((item, index) => (
-                <div key={item.label} className="relative flex gap-6 sm:gap-8 items-start">
+              {dates.map((item) => (
+                <div key={item.label} className="relative flex gap-6 sm:gap-8 items-start pl-1">
                   <div
-                    className={`relative z-10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shrink-0 ${
+                    className={`relative z-10 w-6 h-6 sm:w-8 sm:h-8 rounded-full shrink-0 mt-6 ${
                       item.status === "highlight"
                         ? "bg-gradient-to-br from-gold to-gold-light shadow-lg shadow-gold/30"
-                        : "bg-white border-2 border-ieee-blue shadow-md"
+                        : "bg-ieee-blue border-2 border-white shadow-md"
                     }`}
-                  >
-                    <span
-                      className={`text-sm sm:text-base font-bold ${
-                        item.status === "highlight" ? "text-slate-900" : "text-ieee-blue"
-                      }`}
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
+                  />
 
                   <div
                     className={`flex-1 card-hover rounded-2xl p-5 sm:p-6 ${
@@ -64,6 +61,17 @@ export default function ImportantDates() {
               ))}
             </div>
           </div>
+
+          {preview && (
+            <div className="text-center mt-10">
+              <Link
+                to="/dates"
+                className="inline-flex px-6 py-3 bg-gradient-to-r from-ieee-blue to-ieee-light text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-ieee-blue/30 transition-all"
+              >
+                View All Dates
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

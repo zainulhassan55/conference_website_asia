@@ -1,7 +1,7 @@
 import SectionHeading from "./SectionHeading";
 import { conference } from "../data/conferenceData";
 
-export default function Submission() {
+export default function Submission({ showHeading = true }) {
   const { submission } = conference;
   const guidelines = [
     "All submissions must be written in English and must present original, unpublished work",
@@ -15,11 +15,26 @@ export default function Submission() {
   return (
     <section id="submission" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Paper Submission"
-          title="Submit Your Paper"
-          subtitle={`${conference.dates.display} · ${conference.location.display}`}
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Paper Submission"
+            title="Submit Your Paper"
+            subtitle={`${conference.dates.display} · ${conference.location.display}`}
+          />
+        )}
+
+        <div className="max-w-4xl mx-auto mb-12 space-y-5 text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p>
+            Accepted and presented papers will be considered for publication in the conference proceedings.
+          </p>
+          <div className="rounded-2xl p-6 bg-slate-50 border border-slate-100">
+            <p className="text-ieee-blue font-semibold mb-1">Publication Details</p>
+            <p className="text-slate-900">TBD</p>
+            <p className="mt-3 text-slate-500 text-sm sm:text-base">
+              Selected high-quality papers may be invited for extended versions in special issues of reputed international journals.
+            </p>
+          </div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 max-w-6xl mx-auto">
           <div className="rounded-3xl p-8 lg:p-10 bg-slate-50 border border-slate-100">

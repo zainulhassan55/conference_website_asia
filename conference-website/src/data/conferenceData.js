@@ -3,7 +3,8 @@ export const conference = {
   fullName: "International Conference on AI, Security, Computing, and Networking",
   edition: "2027",
   tagline: "Fostering Interdisciplinary Collaboration for Next-Generation Intelligent Systems",
-  ieeeApproved: true,
+  ieeeLogo: `${import.meta.env.BASE_URL}ieee_logo.png`,
+  ieeeSmcLogo: `${import.meta.env.BASE_URL}smc_logo.png`,
   dates: {
     start: "April 9, 2027",
     end: "April 11, 2027",
@@ -34,29 +35,29 @@ export const conference = {
 };
 
 export const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Dates", href: "#dates" },
+  { label: "About", href: "/about" },
+  { label: "Dates", href: "/dates" },
   {
     label: "Authors",
     children: [
-      { label: "Call for Papers", href: "#cfp" },
-      { label: "Submission", href: "#submission" },
-      { label: "Registration", href: "#register" },
+      { label: "Submission", href: "/submission" },
+      { label: "Registration", href: "/register" },
+      { label: "Chair Message", href: "/chair-message" },
     ],
   },
-  { label: "Committee", href: "#committee" },
+  { label: "Committee", href: "/committee" },
   {
     label: "Program",
     children: [
-      { label: "Tutorials & Workshops", href: "#tutorials" },
-      { label: "Keynote Speakers", href: "#speakers" },
-      { label: "Tracks", href: "#tracks" },
-      { label: "Awards", href: "#awards" },
+      { label: "Tutorials & Workshops", href: "/tutorials" },
+      { label: "Keynote Speakers", href: "/speakers" },
+      { label: "Conference Topics", href: "/tracks" },
+      { label: "Awards", href: "/awards" },
     ],
   },
-  { label: "Sponsorship", href: "#sponsorship" },
-  { label: "Venue", href: "#venue" },
-  { label: "Contact", href: "#contact" },
+  { label: "Sponsorship", href: "/sponsorship" },
+  { label: "Venue", href: "/venue" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const navLinks = navItems.flatMap((item) =>
@@ -70,7 +71,7 @@ export const aboutContent = {
     "Researchers from academia, industry, government organizations, and research laboratories are invited to submit original and unpublished research contributions.",
   ],
   highlights: [
-    { title: "IEEE Approved", desc: "Premier international forum with global research visibility", color: "from-ieee-blue to-ieee-light" },
+    { title: "International Forum", desc: "Premier international forum with global research visibility", color: "from-ieee-blue to-ieee-light" },
     { title: "6 Research Tracks", desc: "AI, Security, Computing, Networking, IoT, and Data Science", color: "from-gold to-gold-light" },
     { title: "Global Community", desc: "Researchers, industry experts, and policymakers worldwide", color: "from-ieee-dark to-ieee-blue" },
     { title: "Awards & Recognition", desc: "Best Paper, Student Paper, Presentation, and Poster awards", color: "from-slate-700 to-slate-900" },
@@ -379,30 +380,24 @@ export const committees = [
 
 export const speakers = [
   {
-    name: "To Be Announced",
+    name: "TBA",
     title: "Keynote Speaker",
-    affiliation: "Details coming soon",
-    topic: "Announcement forthcoming",
-  },
-  {
-    name: "To Be Announced",
-    title: "Keynote Speaker",
-    affiliation: "Details coming soon",
-    topic: "Announcement forthcoming",
-  },
-  {
-    name: "To Be Announced",
-    title: "Keynote Speaker",
-    affiliation: "Details coming soon",
-    topic: "Announcement forthcoming",
-  },
-  {
-    name: "To Be Announced",
-    title: "Keynote Speaker",
-    affiliation: "Details coming soon",
-    topic: "Announcement forthcoming",
+    affiliation: "To be announced",
+    topic: "To be announced",
   },
 ];
+
+export const welcomeMessage = {
+  chair: "General Chair, AISCN 2027",
+  chairName: "Prof. Brij Gupta",
+  chairTitle: "General Chair",
+  chairAffiliation: "Asia University, Taiwan",
+  paragraphs: [
+    "On behalf of the organizing committee, it is my great pleasure to welcome you to the International Conference on AI, Security, Computing, and Networking (AISCN 2027), to be held at Asia University, Taichung, Taiwan.",
+    "AISCN 2027 brings together researchers, academicians, industry experts, and practitioners from around the world to share innovative ideas, present cutting-edge research, and discuss emerging trends in artificial intelligence, cyber security, computing technologies, communication systems, and computer networks.",
+    "We look forward to your participation and to fostering interdisciplinary collaboration for next-generation intelligent systems. We hope you will join us for an engaging and inspiring conference experience.",
+  ],
+};
 
 export const tutorialsWorkshops = [
   {
@@ -425,9 +420,3 @@ export const tutorialsWorkshops = [
   },
 ];
 
-export const stats = [
-  { value: "6", label: "Research Tracks" },
-  { value: "40+", label: "TPC Members" },
-  { value: "4", label: "Conference Awards" },
-  { value: "3", label: "Conference Days" },
-];

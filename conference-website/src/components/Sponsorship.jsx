@@ -1,19 +1,21 @@
 import SectionHeading from "./SectionHeading";
 import { conference, sponsorshipBenefits } from "../data/conferenceData";
 
-export default function Sponsorship() {
+export default function Sponsorship({ showHeading = true }) {
   return (
     <section id="sponsorship" className="py-20 lg:py-28 bg-gradient-to-br from-slate-950 via-ieee-dark to-slate-950 relative overflow-hidden">
       <div className="absolute inset-0 hero-grid opacity-40" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Sponsorship"
-          title="Partner With AISCN 2027"
-          subtitle={`${conference.dates.display} · ${conference.location.display}`}
-          light
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Sponsorship"
+            title="Partner With AISCN 2027"
+            subtitle={`${conference.dates.display} · ${conference.location.display}`}
+            light
+          />
+        )}
 
         <div className="max-w-4xl mx-auto mb-12 space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
           <p>

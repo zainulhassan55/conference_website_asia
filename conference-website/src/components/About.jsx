@@ -1,16 +1,9 @@
-import SectionHeading from "./SectionHeading";
-import { conference, aboutContent } from "../data/conferenceData";
+import { aboutContent } from "../data/conferenceData";
 
 export default function About() {
   return (
     <section id="about" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="About the Conference"
-          title={`Welcome to ${conference.name} ${conference.edition}`}
-          subtitle={`${conference.dates.display} · ${conference.location.display}`}
-        />
-
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="space-y-5 text-slate-600 leading-relaxed text-base sm:text-lg">
             {aboutContent.paragraphs.map((paragraph) => (

@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 import { conference } from "../data/conferenceData";
 import { IconMail } from "./Icons";
 
-export default function Contact() {
+export default function Contact({ showHeading = true }) {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
@@ -17,11 +17,13 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Contact Us"
-          title="Get in Touch"
-          subtitle="Have questions about paper submission, registration, or sponsorship? We're here to help."
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Contact Us"
+            title="Get in Touch"
+            subtitle="Have questions about paper submission, registration, or sponsorship? We're here to help."
+          />
+        )}
 
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 max-w-6xl mx-auto">
           <div className="lg:col-span-2 space-y-6">

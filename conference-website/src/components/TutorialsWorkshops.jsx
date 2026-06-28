@@ -1,15 +1,17 @@
 import SectionHeading from "./SectionHeading";
 import { tutorialsWorkshops } from "../data/conferenceData";
 
-export default function TutorialsWorkshops() {
+export default function TutorialsWorkshops({ showHeading = true }) {
   return (
     <section id="tutorials" className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Tutorials & Workshops"
-          title="Deep Dive Sessions"
-          subtitle="Complementing the main technical program with focused learning and collaborative discussions."
-        />
+        {showHeading && (
+          <SectionHeading
+            badge="Tutorials & Workshops"
+            title="Deep Dive Sessions"
+            subtitle="Complementing the main technical program with focused learning and collaborative discussions."
+          />
+        )}
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {tutorialsWorkshops.map((section) => (
