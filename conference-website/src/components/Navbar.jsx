@@ -145,7 +145,12 @@ export default function Navbar() {
                   itemClassName={dropdownItemClassName}
                 />
               ) : (
-                <NavLinkItem key={item.href} to={item.href} className={linkClassName}>
+                <NavLinkItem
+                  key={item.href}
+                  to={item.href}
+                  end={item.href === "/"}
+                  className={linkClassName}
+                >
                   {item.label}
                 </NavLinkItem>
               )
@@ -182,6 +187,7 @@ export default function Navbar() {
                 <NavLinkItem
                   key={item.href}
                   to={item.href}
+                  end={item.href === "/"}
                   onClick={closeMobileMenu}
                   className="block px-4 py-3.5 text-lg font-medium text-slate-200 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
                 >

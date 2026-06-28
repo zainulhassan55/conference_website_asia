@@ -35,7 +35,7 @@ export const conference = {
 };
 
 export const navItems = [
-  { label: "Dates", href: "/dates" },
+  { label: "Home", href: "/" },
   {
     label: "Authors",
     children: [
@@ -55,6 +55,7 @@ export const navItems = [
     ],
   },
   { label: "Sponsorship", href: "/sponsorship" },
+  { label: "Dates", href: "/dates" },
   { label: "Venue", href: "/venue" },
   { label: "Contact", href: "/contact" },
 ];
