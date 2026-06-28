@@ -60,12 +60,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm">
+        <div className="mt-12 pt-8 border-t border-white/5 flex justify-center items-center">
+          <p className="text-sm text-center">
             &copy; {new Date().getFullYear()} {conference.name} {conference.edition}. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-500 text-center sm:text-right">
-            IEEE is a registered trademark of The Institute of Electrical and Electronics Engineers, Inc.
           </p>
         </div>
       </div>
