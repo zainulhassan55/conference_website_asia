@@ -43,9 +43,9 @@ export const navItems = [
     children: [
       { label: "Submission", href: "/submission" },
       { label: "Registration", href: "/register" },
-      { label: "Chair Message", href: "/chair-message" },
     ],
   },
+  { label: "Chair Message", href: "/chair-message" },
   { label: "Committee", href: "/committee" },
   {
     label: "Program",
@@ -81,7 +81,7 @@ export const aboutContent = {
 };
 
 export const importantDates = [
-  { label: "Opening Paper Submission", date: "20 July 2026", status: "upcoming" },
+  { label: "Opening Paper Submission", date: "01 July 2026", status: "upcoming" },
   { label: "Paper Submission Deadline", date: "15 December 2026", status: "upcoming" },
   { label: "Acceptance Notification", date: "31 January 2027", status: "upcoming" },
   { label: "Submission of Final Manuscript & Copyright", date: "15 February 2027", status: "upcoming" },
@@ -252,7 +252,7 @@ export const committees = [
     title: "General Chairs",
     members: [
       "Brij Gupta, Asia University, Taiwan",
-      "V. P. Meena, NIT Jamshedpur and Chair, IEEE Systems Council Systems Education Technical Committee, USA",
+      "V. P. Meena, NIT Jamshedpur and Chair, Student Chapter Educational Program Subcommittee (Regions 1–10), IEEE Systems Council, USA",
     ],
   },
   {
@@ -317,7 +317,7 @@ export const committees = [
     ],
   },
   {
-    title: "Advisory Committee",
+    title: "International Advisory Committee",
     members: [
       "Mr. Deepak Mathur, 2024 IEEE Vice President, MGA",
       "Prof. Rajesh Kumar, MNIT Jaipur",
@@ -340,11 +340,6 @@ export const committees = [
       "Prof. Premalata Jena, Indian Institute of Technology Roorkee, India",
       "Mr. Manish Advani, Advisor to Chairman, RSB Global",
       "Prof. Sanjeev Shrivastava, Co-PI, I-STEM (Govt. of India)",
-    ],
-  },
-  {
-    title: "International Advisory Committee",
-    members: [
       "Michael Sheng, Macquarie University, Sydney, Australia",
       "Francesco Colace, University of Salerno, Italy",
       "Dragan Peraković, University of Zagreb, Croatia",
@@ -435,6 +430,8 @@ export const welcomeMessage = {
         "General Chair, AISCN 2027",
         "Director, International Center for AI and Cyber Security Research and Innovations (CCRI)",
         "Asia University, Taiwan",
+        "General Chair, AISCN 2027",
+        "Founder,  AISCN Series"
       ],
     },
     {
@@ -444,6 +441,8 @@ export const welcomeMessage = {
         "Assistant Professor, Department of Electrical Engineering",
         "National Institute of Technology Jamshedpur, India",
         "Chair, Student Chapter Educational Program Subcommittee (Regions 1–10), IEEE Systems Council, USA",
+        "General Chair, AISCN 2027",
+        "Founder,  AISCN Series"
       ],
     },
   ],
