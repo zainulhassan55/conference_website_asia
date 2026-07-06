@@ -14,6 +14,7 @@ import SponsorshipPage from "./pages/SponsorshipPage";
 import VenuePage from "./pages/VenuePage";
 import ContactPage from "./pages/ContactPage";
 import ChairMessagePage from "./pages/ChairMessagePage";
+import CallForPapersPage from "./pages/CallForPapersPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="dates" element={<DatesPage />} />
           <Route path="submission" element={<SubmissionPage />} />
+          <Route path="call-for-papers" element={<CallForPapersPage />} />
           <Route path="register" element={<RegistrationPage />} />
           <Route path="chair-message" element={<ChairMessagePage />} />
           <Route path="committee" element={<CommitteePage />} />

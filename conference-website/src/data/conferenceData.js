@@ -41,26 +41,30 @@ export const navItems = [
   {
     label: "Authors",
     children: [
+      { label: "Call for Papers", href: "/call-for-papers" },
       { label: "Submission", href: "/submission" },
       { label: "Registration", href: "/register" },
     ],
   },
   { label: "Chair Message", href: "/chair-message" },
-  { label: "Committee", href: "/committee" },
   {
     label: "Program",
     children: [
+      { label: "Committee", href: "/committee" },
       { label: "Tutorials & Workshops", href: "/tutorials" },
       { label: "Keynote Speakers", href: "/speakers" },
       { label: "Conference Topics", href: "/tracks" },
       { label: "Awards", href: "/awards" },
+      { label: "Venue", href: "/venue" },
     ],
   },
   { label: "Sponsorship", href: "/sponsorship" },
-  { label: "Dates", href: "/dates" },
-  { label: "Venue", href: "/venue" },
-  { label: "Contact", href: "/contact" },
+  { label: "Important Dates", href: "/dates" },
+  { label: "Contact Us", href: "/contact" },
 ];
+
+export const callForPapersIntro =
+  "We solicit original research and technical papers not published elsewhere. The papers can be theoretical, practical and application oriented on the following conference tracks but not limited to:";
 
 export const navLinks = navItems.flatMap((item) =>
   item.children ? item.children : [item]

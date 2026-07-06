@@ -1,21 +1,30 @@
-import { useState } from "react";
 import SectionHeading from "./SectionHeading";
 import { conference } from "../data/conferenceData";
-import { IconMail } from "./Icons";
+import { IconCalendar, IconLocation, IconMail } from "./Icons";
+
+const inquiryTopics = [
+  { label: "Paper Submission", subject: "AISCN 2027 - Paper Submission Inquiry" },
+  { label: "Registration", subject: "AISCN 2027 - Registration Inquiry" },
+  { label: "Sponsorship", subject: "AISCN 2027 - Sponsorship Inquiry" },
+  { label: "Committee Inquiry", subject: "AISCN 2027 - Committee Inquiry" },
+  { label: "General Inquiry", subject: "AISCN 2027 - General Inquiry" },
+];
+
+function ContactCard({ icon, title, children, className = "bg-white" }) {
+  return (
+    <div className={`rounded-2xl border border-slate-100 shadow-sm p-6 lg:p-8 ${className}`}>
+      <div className="w-12 h-12 rounded-xl bg-ieee-blue/10 flex items-center justify-center text-ieee-blue mb-5">
+        {icon}
+      </div>
+      <h3 className="font-bold text-slate-900 text-lg font-[family-name:var(--font-display)]">{title}</h3>
+      <div className="mt-4 space-y-2 text-slate-600 text-sm sm:text-base">{children}</div>
+    </div>
+  );
+}
 
 export default function Contact({ showHeading = true }) {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setForm({ name: "", email: "", subject: "", message: "" });
-    setTimeout(() => setSubmitted(false), 4000);
-  };
-
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-slate-50">
+    <section id="contact" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeading && (
           <SectionHeading
@@ -25,113 +34,73 @@ export default function Contact({ showHeading = true }) {
           />
         )}
 
-        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 max-w-6xl mx-auto">
-          <div className="lg:col-span-2 space-y-6">
-            <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-ieee-blue/10 flex items-center justify-center text-ieee-blue mb-4">
-                <IconMail />
-              </div>
-              <h3 className="font-semibold text-slate-900">Email Us</h3>
-              <a
-                href={`mailto:${conference.contact.email}`}
-                className="text-ieee-blue hover:underline mt-2 block text-sm sm:text-base break-all"
-              >
-                {conference.contact.email}
-              </a>
+        <div className="max-w-5xl mx-auto mb-12">
+          <div className="rounded-3xl bg-gradient-to-br from-ieee-dark to-ieee-blue p-8 lg:p-10 text-white text-center shadow-xl shadow-ieee-blue/20">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-white/10 flex items-center justify-center mb-5">
+              <IconMail className="w-7 h-7" />
             </div>
-
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-ieee-dark to-ieee-blue text-white">
-              <h3 className="font-semibold text-lg">Conference Secretariat</h3>
-              <p className="text-slate-300 text-sm mt-2 leading-relaxed">
-                {conference.fullName}<br />
-                ({conference.name} {conference.edition})<br />
-                {conference.location.venue}<br />
-                {conference.location.city}, {conference.location.country}
-              </p>
-              <p className="text-ieee-light text-sm mt-4">{conference.dates.display}</p>
-            </div>
-          </div>
-
-          <form onSubmit={handleSubmit} className="lg:col-span-3 space-y-5">
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                  Full Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:border-ieee-blue focus:ring-2 focus:ring-ieee-blue/20 outline-none transition-all"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:border-ieee-blue focus:ring-2 focus:ring-ieee-blue/20 outline-none transition-all"
-                  placeholder="you@university.edu"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                Subject
-              </label>
-              <select
-                id="subject"
-                required
-                value={form.subject}
-                onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:border-ieee-blue focus:ring-2 focus:ring-ieee-blue/20 outline-none transition-all"
-              >
-                <option value="">Select a topic</option>
-                <option value="paper">Paper Submission</option>
-                <option value="registration">Registration</option>
-                <option value="sponsorship">Sponsorship</option>
-                <option value="committee">Committee Inquiry</option>
-                <option value="other">Other Inquiry</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                required
-                rows={5}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:border-ieee-blue focus:ring-2 focus:ring-ieee-blue/20 outline-none transition-all resize-none"
-                placeholder="How can we help you?"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-ieee-blue to-ieee-light text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-ieee-blue/30 transition-all"
+            <h3 className="text-2xl font-bold font-[family-name:var(--font-display)]">Conference Email</h3>
+            <p className="mt-3 text-slate-200 text-sm sm:text-base max-w-2xl mx-auto">
+              For all conference-related inquiries, please contact the organizing committee directly by email.
+            </p>
+            <a
+              href={`mailto:${conference.contact.email}`}
+              className="inline-flex mt-6 px-6 py-3 rounded-xl bg-white text-ieee-blue font-semibold hover:bg-slate-100 transition-colors break-all"
             >
-              Send Message
-            </button>
+              {conference.contact.email}
+            </a>
+          </div>
+        </div>
 
-            {submitted && (
-              <p className="text-emerald-600 font-medium text-sm">
-                Thank you! Your message has been received. We&apos;ll get back to you soon.
-              </p>
-            )}
-          </form>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <ContactCard icon={<IconCalendar />} title="Conference Dates">
+            <p className="font-semibold text-slate-900">{conference.dates.display}</p>
+            <p>Hybrid conference format</p>
+          </ContactCard>
+
+          <ContactCard icon={<IconLocation />} title="Venue">
+            <p className="font-semibold text-slate-900">{conference.location.venue}</p>
+            <p>{conference.location.address}</p>
+          </ContactCard>
+
+          <ContactCard
+            icon={<IconMail />}
+            title="Sponsorship"
+            className="sm:col-span-2 lg:col-span-1"
+          >
+            <p>For sponsorship opportunities, please contact:</p>
+            <a
+              href={`mailto:${conference.contact.sponsorshipEmail}?subject=AISCN 2027 Sponsorship Inquiry`}
+              className="text-ieee-blue font-semibold hover:underline break-all"
+            >
+              {conference.contact.sponsorshipEmail}
+            </a>
+          </ContactCard>
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-12">
+          <h3 className="text-xl font-bold text-slate-900 text-center font-[family-name:var(--font-display)] mb-6">
+            Inquiry Topics
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {inquiryTopics.map((topic) => (
+              <a
+                key={topic.label}
+                href={`mailto:${conference.contact.email}?subject=${encodeURIComponent(topic.subject)}`}
+                className="px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700 text-sm font-medium hover:bg-ieee-blue/5 hover:border-ieee-blue/30 hover:text-ieee-blue transition-colors"
+              >
+                {topic.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <span className="font-semibold text-slate-900">{conference.fullName}</span>
+            <br />
+            ({conference.name} {conference.edition}) · {conference.location.display}
+          </p>
         </div>
       </div>
     </section>
