@@ -53,3 +53,20 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          timeout: 900000
+          error_count: 15
+          reporting_interval: 10000
+
+      - name: Wait before retry
+        if: failure() && steps.deployment.outcome == 'failure'
+        run: sleep 60
+
+      - name: Retry deploy website
+        if: failure() && steps.deployment.outcome == 'failure'
+        id: deployment-retry
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 900000
+          error_count: 15
+          reporting_interval: 10000
