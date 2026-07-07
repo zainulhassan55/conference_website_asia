@@ -33,8 +33,26 @@ export default function Submission({ showHeading = true }) {
               All accepted and presented papers of AISCN 2027 will be submitted for inclusion in the IEEE Xplore Digital Library subject to compliance with IEEE quality and publication requirements.
             </p>
             <p className="mt-3 text-slate-500 text-sm sm:text-base">
-              AISCN conference procedings will index in Scopus and Ei Compendex.
+              AISCN conference proceedings will be indexed in Scopus and Ei Compendex.
             </p>
+            <div className="mt-6 pt-5 border-t border-slate-200">
+              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+                <div className="flex h-16 sm:h-20 w-40 sm:w-48 items-center justify-center">
+                  <img
+                    src={conference.scopusLogo}
+                    alt="Scopus logo"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="flex h-16 sm:h-20 w-40 sm:w-48 items-center justify-center">
+                  <img
+                    src={conference.compendexLogo}
+                    alt="Ei Compendex logo"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

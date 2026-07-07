@@ -7,6 +7,8 @@ export const conference = {
   ieeeSmcLogo: `${import.meta.env.BASE_URL}smc_logo.png`,
   auLogo: `${import.meta.env.BASE_URL}au_logo.png`,
   ccriLogo: `${import.meta.env.BASE_URL}ccri_logo.png`,
+  scopusLogo: `${import.meta.env.BASE_URL}scopus_logo.svg`,
+  compendexLogo: `${import.meta.env.BASE_URL}compendex_logo.png`,
   dates: {
     start: "April 9, 2027",
     end: "April 11, 2027",
