@@ -250,6 +250,7 @@ export const committees = [
     members: [
       "Jeffrey J. P. Tsai, President, Asia University, Taiwan",
       "Francesco Palmieri, University of Salerno, Italy",
+      "Prof. N. P. Padhy, Director, Malaviya National Institute of Technology Jaipur, India",
     ],
   },
   {
