@@ -29,9 +29,8 @@ export default function Submission({ showHeading = true }) {
           </p>
           <div className="rounded-2xl p-6 bg-slate-50 border border-slate-100">
             <p className="text-ieee-blue font-semibold mb-1">Publication Details</p>
-            <p className="text-slate-900">TBD</p>
             <p className="mt-3 text-slate-500 text-sm sm:text-base">
-              Selected high-quality papers may be invited for extended versions in special issues of reputed international journals.
+              All accepted and presented papers of AISCN 2027 will be submitted for inclusion in the IEEE Xplore Digital Library subject to compliance with IEEE quality and publication requirements.
             </p>
           </div>
         </div>
