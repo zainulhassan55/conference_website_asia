@@ -20,7 +20,7 @@ export default function SectionHeading({ badge, title, subtitle, light = false }
         {title}
       </h2>
       {subtitle && (
-        <p className={`mt-4 text-lg leading-relaxed ${light ? "text-slate-300" : "text-slate-600"}`}>
+        <p className={`mt-4 text-lg leading-relaxed text-center ${light ? "text-slate-300" : "text-slate-600"}`}>
           {subtitle}
         </p>
       )}
