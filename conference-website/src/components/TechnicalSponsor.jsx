@@ -25,10 +25,10 @@ export default function TechnicalSponsor() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 sm:mb-14 text-center">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-display)] text-slate-900">
-            Co-Sponsor
+            Technical Co-Sponsors
           </h2>
           <p className="mt-4 mx-auto max-w-3xl text-lg leading-relaxed text-center text-slate-600">
-            AISCN 2027 is supported by the following co-sponsors.
+            AISCN 2027 is supported by the following technical co-sponsors.
           </p>
         </div>
 
