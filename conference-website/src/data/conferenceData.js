@@ -347,7 +347,7 @@ export const committees = [
       "Prof. Pankaj Rai, Director, BIT Sindri, India",
       "Prof. Premalata Jena, Indian Institute of Technology Roorkee, India",
       "Mr. Manish Advani, Advisor to Chairman, RSB Global",
-      "Prof. Sanjeev Shrivastava, Co-PI, I-STEM (Govt. of India)",
+      "Prof. Sanjeev Kumar Shrivastava – Professor, ECE and Associate Director (Skilling & Research), Dayananda Sagar University, Bengaluru",
       "Michael Sheng, Macquarie University, Sydney, Australia",
       "Francesco Colace, University of Salerno, Italy",
       "Dragan Peraković, University of Zagreb, Croatia",
