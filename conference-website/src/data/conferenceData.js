@@ -253,7 +253,7 @@ export const committees = [
       "Jeffrey J. P. Tsai, President, Asia University, Taiwan",
       "Francesco Palmieri, University of Salerno, Italy",
       "Prof. N. P. Padhy, Director, Malaviya National Institute of Technology Jaipur, India",
-      "Prof. Goutam Sutradhar, Director, Indian Institute of Technology Jamshedpur, India",
+      "Prof. Goutam Sutradhar, Director, National Institute of Technology Jamshedpur, India",
     ],
   },
   {
