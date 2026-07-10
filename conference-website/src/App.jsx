@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -6,7 +6,7 @@ import DatesPage from "./pages/DatesPage";
 import SubmissionPage from "./pages/SubmissionPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import CommitteePage from "./pages/CommitteePage";
-import TutorialsPage from "./pages/TutorialsPage";
+import WorkshopsPage from "./pages/WorkshopsPage";
 import SpeakersPage from "./pages/SpeakersPage";
 import TracksPage from "./pages/TracksPage";
 import AwardsPage from "./pages/AwardsPage";
@@ -29,7 +29,8 @@ function App() {
           <Route path="register" element={<RegistrationPage />} />
           <Route path="chair-message" element={<ChairMessagePage />} />
           <Route path="committee" element={<CommitteePage />} />
-          <Route path="tutorials" element={<TutorialsPage />} />
+          <Route path="workshops" element={<WorkshopsPage />} />
+          <Route path="tutorials" element={<Navigate to="/workshops" replace />} />
           <Route path="speakers" element={<SpeakersPage />} />
           <Route path="tracks" element={<TracksPage />} />
           <Route path="awards" element={<AwardsPage />} />

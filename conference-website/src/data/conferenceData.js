@@ -53,7 +53,7 @@ export const navItems = [
     label: "Program",
     children: [
       { label: "Committee", href: "/committee" },
-      { label: "Tutorials & Workshops", href: "/tutorials" },
+      { label: "Workshops", href: "/workshops" },
       { label: "Keynote Speakers", href: "/speakers" },
       { label: "Conference Topics", href: "/tracks" },
       { label: "Awards", href: "/awards" },

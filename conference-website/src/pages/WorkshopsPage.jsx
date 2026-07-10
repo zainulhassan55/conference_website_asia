@@ -1,15 +1,15 @@
 import PageBanner from "../components/PageBanner";
-import TutorialsWorkshops from "../components/TutorialsWorkshops";
+import Workshops from "../components/Workshops";
 
-export default function TutorialsPage() {
+export default function WorkshopsPage() {
   return (
     <>
       <PageBanner
-        badge="Tutorials & Workshops"
+        badge="Workshops"
         title="Call for Workshop Proposal"
         subtitle="Submit your workshop proposal to be held in conjunction with AISCN 2027."
       />
-      <TutorialsWorkshops />
+      <Workshops />
     </>
   );
 }

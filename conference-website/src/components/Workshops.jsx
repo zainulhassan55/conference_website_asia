@@ -1,8 +1,8 @@
 import { conference, workshopProposal } from "../data/conferenceData";
 
-export default function TutorialsWorkshops() {
+export default function Workshops() {
   return (
-    <section id="tutorials" className="py-20 lg:py-28 bg-slate-50">
+    <section id="workshops" className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-10 lg:space-y-12">
           <div>
