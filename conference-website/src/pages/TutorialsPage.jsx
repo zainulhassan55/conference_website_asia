@@ -5,11 +5,11 @@ export default function TutorialsPage() {
   return (
     <>
       <PageBanner
-        badge="Program"
-        title="Tutorials & Workshops"
-        subtitle="Expert-led sessions and interactive workshops on emerging research directions."
+        badge="Tutorials & Workshops"
+        title="Call for Workshop Proposal"
+        subtitle="Submit your workshop proposal to be held in conjunction with AISCN 2027."
       />
-      <TutorialsWorkshops showHeading={false} />
+      <TutorialsWorkshops />
     </>
   );
 }

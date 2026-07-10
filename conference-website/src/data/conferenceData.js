@@ -454,24 +454,21 @@ export const welcomeMessage = {
   ],
 };
 
-export const tutorialsWorkshops = [
-  {
-    title: "Tutorials",
-    description:
-      "Expert-led sessions covering foundational and advanced topics in AI, cybersecurity, computing, and networking.",
-    items: [
-      "Tutorial topics and schedules will be announced soon.",
-      "Sessions are designed for researchers, practitioners, and students.",
-    ],
-  },
-  {
-    title: "Workshops",
-    description:
-      "Interactive workshops providing hands-on experience and focused discussions on emerging research directions.",
-    items: [
-      "Workshop themes and organizers will be announced soon.",
-      "Participation details will be shared closer to the conference dates.",
-    ],
-  },
-];
+export const workshopProposal = {
+  importantDates: [
+    { label: "Workshop Proposal Submission", date: "August 30, 2026" },
+    { label: "Proposal Acceptance Notification", date: "September 20, 2026" },
+  ],
+  scope: [
+    "AISCN 2027 invites proposals for workshops to be held in conjunction with the main conference. The workshops intend to cover specialized topics through a combination of regular papers, panel discussions, keynotes, hands-on workshops, conference white papers, and possibly poster presentations. Workshops are expected to highlight current topics related to technical issues that encourage active participation from students, academia, government, and industry professionals.",
+    "The workshop organizers must submit a proposal in the specified template, clearly describing: the motivation, scope/topics, the workshop format (i.e., duration of presentations, number of expected presentations, whether there are regular paper presentations, panel discussion, hands-on session or joint Q&A session) and whether the proposal is for a full-day (6 hours) or half-day (3 hours). If the proposal is successful, the workshop organizers will be required to set up the call for papers, organize the peer reviews and manage the workshop paper acceptance. Accepted and presented workshop papers will appear in the conference proceedings.",
+  ],
+  templateFields: [
+    "Workshop Title",
+    "Aim and Scope (150–300 words)",
+    "Topics Of Interest",
+    "Chair details and Biography",
+    "Potential Contributors",
+  ],
+};
 
