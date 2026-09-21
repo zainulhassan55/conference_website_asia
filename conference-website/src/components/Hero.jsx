@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { conference } from "../data/conferenceData";
 import { IconCalendar, IconLocation, IconChevronDown } from "./Icons";
 import HeroVisual from "./HeroVisual";
@@ -49,12 +48,14 @@ export default function Hero() {
             </div>
 
             <div className="animate-fade-in-up opacity-0 animation-delay-600 mt-10">
-              <Link
-                to="/submission"
+              <a
+                href={conference.submission.cmt3Url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex px-6 sm:px-8 py-3.5 bg-gradient-to-r from-ieee-blue to-ieee-light text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-ieee-blue/30 hover:scale-105 transition-all text-sm sm:text-base"
               >
                 Submit Paper
-              </Link>
+              </a>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { conference } from "../data/conferenceData";
 import { IconChevronUp, IconDocument } from "./Icons";
 
 const visibleClass =
@@ -30,13 +30,15 @@ export default function FloatingActions() {
         visible ? visibleClass : hiddenClass
       }`}
     >
-      <Link
-        to="/submission"
+      <a
+        href={conference.submission.cmt3Url}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`group flex items-center gap-2.5 px-4 sm:px-5 py-3 font-semibold text-sm ${actionButtonClass}`}
       >
         <IconDocument className="w-4 h-4 shrink-0" />
         <span>Submit Paper</span>
-      </Link>
+      </a>
 
       <button
         type="button"

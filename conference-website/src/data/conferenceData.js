@@ -28,7 +28,7 @@ export const conference = {
     sponsorshipEmail: "aiscn2027@cyber-conf.com",
   },
   submission: {
-    deadline: "15 December 2026",
+    deadline: "15 December 2026 (Round 2)",
     maxPages: 6,
     language: "English",
     platform: "Microsoft CMT",
@@ -88,10 +88,14 @@ export const aboutContent = {
 
 export const importantDates = [
   { label: "Opening Paper Submission", date: "01 July 2026", status: "upcoming" },
-  { label: "Paper Submission Deadline", date: "15 December 2026", status: "upcoming" },
-  { label: "Acceptance Notification", date: "31 January 2027", status: "upcoming" },
-  { label: "Submission of Final Manuscript & Copyright", date: "15 February 2027", status: "upcoming" },
-  { label: "Registration Deadline", date: "15 March 2027", status: "upcoming" },
+  { label: "Paper Submission Deadline (Round 1)", date: "15 November 2026", status: "upcoming" },
+  { label: "Paper Submission Deadline (Round 2)", date: "15 December 2026", status: "upcoming" },
+  { label: "Acceptance Notification (Round 1)", date: "1 January 2027", status: "upcoming" },
+  { label: "Acceptance Notification (Round 2)", date: "31 January 2027", status: "upcoming" },
+  { label: "Submission of Final Manuscript & Copyright (Round 1)", date: "07 January 2027", status: "upcoming" },
+  { label: "Submission of Final Manuscript & Copyright (Round 2)", date: "07 February 2027", status: "upcoming" },
+  { label: "Registration Deadline (Early Bird) (Round 1)", date: "15 January 2027", status: "upcoming" },
+  { label: "Registration Deadline (Early Bird) (Round 2)", date: "15 February 2027", status: "upcoming" },
   { label: "Conference Dates", date: "9–11 April 2027", status: "highlight" },
 ];
 
