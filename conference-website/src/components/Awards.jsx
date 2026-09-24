@@ -16,9 +16,13 @@ const icons = [
   </svg>,
 ];
 
-export default function Awards({ showHeading = true, hideBadge = false }) {
+export default function Awards({ showHeading = true, hideBadge = false, compactFooter = false }) {
+  const sectionPadding = compactFooter
+    ? "pt-20 lg:pt-28 pb-4 lg:pb-6"
+    : "py-20 lg:py-28";
+
   return (
-    <section id="awards" className="py-20 lg:py-28 bg-white">
+    <section id="awards" className={`${sectionPadding} bg-white`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeading && (
           <SectionHeading

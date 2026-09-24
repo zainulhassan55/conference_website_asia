@@ -38,6 +38,29 @@ export const conference = {
   logo: `${import.meta.env.BASE_URL}new_logo.jpeg`,
 };
 
+export const knowledgePartners = [
+  {
+    src: `${import.meta.env.BASE_URL}nbsc_logo.png`,
+    alt: "NBSC logo",
+    imageScale: 1,
+  },
+  {
+    src: `${import.meta.env.BASE_URL}budi_luhur_logo.png`,
+    alt: "Universitas Budi Luhur logo",
+    imageScale: 1,
+  },
+  {
+    src: `${import.meta.env.BASE_URL}uottawa_logo.png`,
+    alt: "University of Ottawa logo",
+    imageScale: 1,
+  },
+  {
+    src: `${import.meta.env.BASE_URL}hkmu_logo.png`,
+    alt: "Hong Kong Metropolitan University logo",
+    imageScale: 1.05,
+  },
+];
+
 export const navItems = [
   { label: "Home", href: "/" },
   {
