@@ -337,10 +337,7 @@ export const committees = [
   },
   {
     title: "Industry Chairs",
-    members: [
-      "Abhay Ratnaparkhi, eBay – AI Platform, USA",
-      "Sugam Sharma, Founder, Iowa State University SUF/eLegalls ai, USA",
-    ],
+    members: ["Sugam Sharma, Founder, Iowa State University SUF/eLegalls ai, USA"],
   },
   {
     title: "Finance Chairs",
