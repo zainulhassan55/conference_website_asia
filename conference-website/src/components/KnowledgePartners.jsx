@@ -3,7 +3,7 @@ import { knowledgePartners } from "../data/conferenceData";
 
 function PartnerLogoCard({ src, alt, imageScale = 1 }) {
   return (
-    <div className="flex-1 min-w-[9rem] max-w-[16rem] rounded-2xl bg-white border border-slate-100 shadow-sm overflow-hidden">
+    <div className="w-full max-w-sm mx-auto lg:max-w-none rounded-2xl bg-white border border-slate-100 shadow-sm overflow-hidden">
       <div className="flex h-28 sm:h-32 lg:h-36 w-full items-center justify-center p-3 sm:p-4">
         <img
           src={src}
@@ -29,7 +29,7 @@ export default function KnowledgePartners() {
           subtitle="AISCN 2027 is supported by the following knowledge partners."
         />
 
-        <div className="flex flex-nowrap items-stretch justify-center gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto overflow-x-auto pb-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto place-items-stretch">
           {knowledgePartners.map((partner) => (
             <PartnerLogoCard
               key={partner.alt}

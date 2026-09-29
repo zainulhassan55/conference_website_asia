@@ -40,6 +40,21 @@ export const conference = {
 
 export const knowledgePartners = [
   {
+    src: `${import.meta.env.BASE_URL}yamaguchi_university_logo.png`,
+    alt: "Yamaguchi University logo",
+    imageScale: 1,
+  },
+  {
+    src: `${import.meta.env.BASE_URL}hkmu_logo.png`,
+    alt: "Hong Kong Metropolitan University logo",
+    imageScale: 1.05,
+  },
+  {
+    src: `${import.meta.env.BASE_URL}uottawa_logo.png`,
+    alt: "University of Ottawa logo",
+    imageScale: 1,
+  },
+  {
     src: `${import.meta.env.BASE_URL}nbsc_logo.png`,
     alt: "NBSC logo",
     imageScale: 1,
@@ -48,16 +63,6 @@ export const knowledgePartners = [
     src: `${import.meta.env.BASE_URL}budi_luhur_logo.png`,
     alt: "Universitas Budi Luhur logo",
     imageScale: 1,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}uottawa_logo.png`,
-    alt: "University of Ottawa logo",
-    imageScale: 1,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}hkmu_logo.png`,
-    alt: "Hong Kong Metropolitan University logo",
-    imageScale: 1.05,
   },
 ];
 
@@ -310,6 +315,7 @@ export const committees = [
     title: "Publication Chairs",
     members: [
       "Chun-Yuan Lin, Asia University, Taiwan",
+      "Shingo Yamaguchi, Yamaguchi University, Japan",
       "Gregorio Martinez Perez, University of Murcia (UMU), Spain",
       "Tzu-Chuen Lu, National Chin-Yi University of Technology, Taiwan",
     ],
@@ -318,9 +324,7 @@ export const committees = [
     title: "Publicity Chairs",
     members: [
       "Nadia Nedjah, State University of Rio de Janeiro, Brazil",
-      "Agung Mulyo Widodo, Esa Unggul University, Indonesia",
-      "Mosiur Rahaman, King Mongkut's University of Technology Thonburi, Thailand",
-      "Sunil Kumar Singh, CCET, Panjab University, Chandigarh, India",
+      "Ayan Mondal, Indian Institute of Technology Indore, India",
     ],
   },
   {
@@ -333,7 +337,10 @@ export const committees = [
   },
   {
     title: "Industry Chairs",
-    members: ["Abhay Ratnaparkhi, eBuy Inc., USA"],
+    members: [
+      "Abhay Ratnaparkhi, eBay – AI Platform, USA",
+      "Sugam Sharma, Founder, Iowa State University SUF/eLegalls ai, USA",
+    ],
   },
   {
     title: "Finance Chairs",
@@ -433,6 +440,9 @@ export const committees = [
       "Angela Amphawan, University Malaysia, Malaysia",
       "Phuc Do, University of Information Technology, Vietnam",
       "Ahmed A. Abd El-Latif, Menoufia University, Egypt",
+      "Agung Mulyo Widodo, Esa Unggul University, Indonesia",
+      "Mosiur Rahaman, King Mongkut's University of Technology Thonburi, Thailand",
+      "Sunil Kumar Singh, CCET, Panjab University, Chandigarh, India",
     ],
   },
 ];
